@@ -1,11 +1,17 @@
 html {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-weight: 400;
 }
 
-*,
-*:before,
-*:after {
+*, *:before, *:after {
     box-sizing: border-box;
 }
 
+body .bold {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+}
+body .medium {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+}
