@@ -1,2 +1,94 @@
-hello world form Alexander
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Калькулятор пиццы</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="calculator">
+    <div class="calculator__layout">
+      <section class="pizza-gallery" aria-label="Вид пиццы">
+        <div class="pizza-gallery__list" id="type-options">
+          <label class="pizza-item">
+            <input type="radio" name="type" value="pepperoni">
+            <span class="pizza-item__card">
+              <img class="pizza-item__img" src="images/pepperoni.jpg" alt="Пепперони" width="140" height="140">
+              <span class="pizza-item__name">Пепперони</span>
+            </span>
+          </label>
+          <label class="pizza-item">
+            <input type="radio" name="type" value="margherita" checked>
+            <span class="pizza-item__card">
+              <img class="pizza-item__img" src="images/margherita.jpg" alt="Маргарита" width="140" height="140">
+              <span class="pizza-item__name">Маргарита</span>
+            </span>
+          </label>
+          <label class="pizza-item">
+            <input type="radio" name="type" value="bavarian">
+            <span class="pizza-item__card">
+              <img class="pizza-item__img" src="images/bavarian.webp" alt="Баварская" width="140" height="140">
+              <span class="pizza-item__name">Баварская</span>
+            </span>
+          </label>
+        </div>
+      </section>
 
+      <aside class="panel">
+        <section class="panel__block">
+          <div class="size-toggle" id="size-options">
+            <label class="size-toggle__option">
+              <input type="radio" name="size" value="small" checked>
+              <span>Маленькая</span>
+            </label>
+            <label class="size-toggle__option">
+              <input type="radio" name="size" value="large">
+              <span>Большая</span>
+            </label>
+          </div>
+        </section>
+
+        <section class="panel__block">
+          <h2 class="panel__title">Добавить по вкусу</h2>
+          <div class="toppings" id="topping-options">
+            <label class="topping-card">
+              <input type="checkbox" name="topping" value="cheeseBoard">
+              <span class="topping-card__inner">
+                <img src="images/topping-cheese-crust.svg" alt="" width="72" height="56">
+                <span class="topping-card__name">Сырный бортик</span>
+                <span class="topping-card__price" data-topping="cheeseBoard">150 ₽</span>
+              </span>
+            </label>
+            <label class="topping-card">
+              <input type="checkbox" name="topping" value="mozzarella">
+              <span class="topping-card__inner">
+                <img src="images/topping-mozzarella.svg" alt="" width="72" height="56">
+                <span class="topping-card__name">Сливочная моцарелла</span>
+                <span class="topping-card__price" data-topping="mozzarella">50 ₽</span>
+              </span>
+            </label>
+            <label class="topping-card">
+              <input type="checkbox" name="topping" value="cheddarParmesan">
+              <span class="topping-card__inner">
+                <img src="images/topping-cheddar.svg" alt="" width="72" height="56">
+                <span class="topping-card__name">Чеддер и пармезан</span>
+                <span class="topping-card__price" data-topping="cheddarParmesan">150 ₽</span>
+              </span>
+            </label>
+          </div>
+        </section>
+
+        <button type="button" class="add-btn" id="add-to-cart">
+          Добавить в корзину за 600 ₽ (400 кКалл)
+        </button>
+
+        <p class="hint" id="cart-message" hidden></p>
+      </aside>
+    </div>
+  </main>
+
+  <script src="pizza.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

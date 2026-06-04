@@ -1,0 +1,235 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #fff;
+  color: #1a1a1a;
+}
+
+.calculator {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+}
+
+.calculator__layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem 2rem;
+  align-items: start;
+}
+
+
+.pizza-gallery__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem 1.5rem;
+  justify-content: flex-start;
+}
+
+.pizza-item {
+  cursor: pointer;
+  flex: 0 0 auto;
+}
+
+.pizza-item input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.pizza-item__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.65rem;
+  text-align: center;
+}
+
+.pizza-item__img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: box-shadow 0.2s, transform 0.15s;
+}
+
+.pizza-item__name {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #333;
+}
+
+
+.pizza-item:hover .pizza-item__img {
+  transform: scale(1.03);
+}
+
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+
+.info-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.25rem;
+  height: 1.25rem;
+  padding: 0;
+  border: none;
+  background: none;
+  color: #999;
+  font-size: 0.95rem;
+  cursor: help;
+  line-height: 1;
+}
+
+
+
+.size-toggle {
+  display: flex;
+  padding: 4px;
+  background: #f0f0f0;
+  border-radius: 999px;
+  max-width: 320px;
+}
+
+.size-toggle__option {
+  flex: 1;
+  cursor: pointer;
+}
+
+.size-toggle__option input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.size-toggle__option span {
+  display: block;
+  padding: 0.6rem 1rem;
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #666;
+  border-radius: 999px;
+  transition: background 0.15s, color 0.15s, box-shadow 0.15s;
+}
+
+.size-toggle__option input:checked + span {
+  background: #fff;
+  color: #1a1a1a;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+
+
+.toppings {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.topping-card {
+  flex: 1 1 100px;
+  min-width: 100px;
+  max-width: 130px;
+  cursor: pointer;
+}
+
+.topping-card input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.topping-card__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.75rem 0.5rem 0.85rem;
+  background: #fff;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  transition: border-color 0.15s, box-shadow 0.15s;
+  min-height: 100%;
+}
+
+.topping-card__inner img {
+  object-fit: contain;
+}
+
+.topping-card__name {
+  font-size: 0.72rem;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.25;
+  color: #333;
+}
+
+.topping-card__price {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.topping-card input:checked + .topping-card__inner {
+  border-color: #ff6b35;
+  box-shadow: 0 2px 16px rgba(255, 107, 53, 0.2);
+}
+
+.add-btn {
+  width: 100%;
+  margin-top: 0.25rem;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: #ff6b35;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+}
+
+.add-btn:hover {
+  background: #f05a24;
+}
+
+.add-btn:active {
+  transform: scale(0.99);
+}
+
+.hint {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #2d8a4e;
+  text-align: center;
+}
+
+@media (max-width: 720px) {
+  .calculator__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .pizza-gallery__list {
+    justify-content: center;
+  }
+
+  .panel {
+    max-width: 400px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
