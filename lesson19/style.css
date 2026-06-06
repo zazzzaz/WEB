@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    color: #333;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px 16px;
+}
+
+h1 {
+    text-align: center;
+}
+
+section {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 24px;
+    border-radius: 8px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.gallery a {
+    display: block;
+}
+
+.gallery img {
+    display: block;
+    height: auto;
+}
+
+.hint {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.error {
+    color: #b91c1c;
+}
